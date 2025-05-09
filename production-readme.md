@@ -1,6 +1,6 @@
-# Sahara Journal System - Production Deployment Guide
+# CoelsN International Journal - Production Deployment Guide
 
-This guide explains how to deploy the Sahara Journal System to production environments using Vercel (frontend) and Render (backend).
+This guide explains how to deploy the CoelsN International Journal system to production environments using Vercel (frontend) and Render (backend).
 
 ## Backend Deployment (Render)
 
@@ -23,7 +23,7 @@ This guide explains how to deploy the Sahara Journal System to production enviro
    GOOGLE_REFRESH_TOKEN=<your-google-refresh-token>
    GOOGLE_DRIVE_FOLDER_ID=<your-google-drive-folder-id>
    DOCUMENT_STORAGE_PATH=/tmp/journals
-   DOCUMENT_STORAGE_URL=https://saharabackend-v190.onrender.com/api/journals/download
+   DOCUMENT_STORAGE_URL=https://coelsn-backend.onrender.com/api/journals/download
    ```
 
    **Note:** Replace the placeholder values with your actual credentials. Never commit actual credentials to your repository.
@@ -32,7 +32,7 @@ This guide explains how to deploy the Sahara Journal System to production enviro
    - Render's filesystem is ephemeral, meaning files saved to the filesystem will be lost when the service restarts
    - The system is configured to use Google Drive for persistent storage
    - Temporary files are stored in `/tmp/journals` which is available but not persistent
-   - The backend URL is `https://saharabackend-v190.onrender.com/api`
+   - The backend URL is `https://coelsn-backend.onrender.com/api`
 
 ## Frontend Deployment (Vercel)
 
@@ -43,7 +43,7 @@ This guide explains how to deploy the Sahara Journal System to production enviro
 
 2. **Set Environment Variables**
    - No additional environment variables are needed for the frontend
-   - The frontend is configured to use `https://saharabackend-v190.onrender.com/api` as the backend URL in production
+   - The frontend is configured to use `https://coelsn-backend.onrender.com/api` as the backend URL in production
 
 3. **Important Notes for Vercel Deployment**
    - The frontend is a static site that communicates with the backend API

@@ -54,16 +54,16 @@ app.use(morgan('dev'));
 const allowedOrigins = [
     'http://localhost:3000',           // Local frontend development
     'http://localhost:5000',           // Vite default port
-    'https://sahara-journal-frontend.vercel.app', // Production frontend
-    'https://sahara-journal.vercel.app'           // Alternative production frontend
+    'https://coels-n-internal-journal-frontend.vercel.app', // Production frontend
+    'https://coelsn-international-journal.vercel.app'       // Alternative production frontend
 ].filter(Boolean);
 
 console.log('Allowed CORS origins:', allowedOrigins);
 
 // Log the current environment
 console.log('NODE_ENV:', process.env.NODE_ENV);
-console.log('Backend URL:', process.env.NODE_ENV === 'production' ? 'https://saharabackend-v190.onrender.com' : `http://localhost:${PORT}`);
-console.log('Frontend URL:', process.env.NODE_ENV === 'production' ? 'https://sahara-journal-frontend.vercel.app' : 'http://localhost:3000');
+console.log('Backend URL:', process.env.NODE_ENV === 'production' ? 'https://coelsn-backend.onrender.com' : `http://localhost:${PORT}`);
+console.log('Frontend URL:', process.env.NODE_ENV === 'production' ? 'https://coels-n-internal-journal-frontend.vercel.app' : 'http://localhost:3000');
 
 app.use((req, res, next) => {
     // Custom CORS handling to allow credentials: false for download routes
