@@ -222,7 +222,7 @@ exports.uploadJournal = async (req, res) => {
             console.log('PDF file exists and is ready for upload, size:', pdfStats.size, 'bytes');
 
             pdfUploadResult = await cloudinary.uploader.upload(pdfFile.path, {
-                folder: 'UploadFiles',
+                folder: 'coelsN_Uploads',
                 resource_type: 'raw',
                 public_id: `${Date.now()}-${pdfFile.filename}`,
                 use_filename: true,
@@ -251,7 +251,7 @@ exports.uploadJournal = async (req, res) => {
             console.log('DOCX file exists and is ready for upload, size:', docxStats.size, 'bytes');
 
             docxUploadResult = await cloudinary.uploader.upload(docxFile.path, {
-                folder: 'UploadFiles',
+                folder: 'coelsN_Uploads',
                 resource_type: 'raw',
                 public_id: `${Date.now()}-${docxFile.filename}`,
                 use_filename: true,
