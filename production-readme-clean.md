@@ -32,7 +32,7 @@ This guide explains how to deploy the CoelsN International Journal system to pro
    - Render's filesystem is ephemeral, meaning files saved to the filesystem will be lost when the service restarts
    - The system is configured to use Google Drive for persistent storage
    - Temporary files are stored in `/tmp/journals` which is available but not persistent
-   - The backend URL is `https://coelsn-backend.onrender.com/api`
+   - The backend URL is `https://coels-backend.onrender.com/api`
 
 ## Frontend Deployment (Vercel)
 
@@ -43,7 +43,7 @@ This guide explains how to deploy the CoelsN International Journal system to pro
 
 2. **Set Environment Variables**
    - No additional environment variables are needed for the frontend
-   - The frontend is configured to use `https://coelsn-backend.onrender.com/api` as the backend URL in production
+   - The frontend is configured to use `https://coels-backend.onrender.com/api` as the backend URL in production
 
 3. **Important Notes for Vercel Deployment**
    - The frontend is a static site that communicates with the backend API
